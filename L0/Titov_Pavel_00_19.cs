@@ -6,7 +6,7 @@ namespace L0
     {
         public static double F(int x, int t)
         {
-            double firstTerm = (1 + Math.Pow(x, 2) - 2*x*t) / Math.Sin(t);
+            double firstTerm = (1 + Math.Pow(x, 2) - 2*x*t) / Math.Sin(t); // если t = 0, то вылетает ошибка
             double secondTerm = 1;
             double thirdTerm = Math.Sqrt(1 + Math.Pow(Math.Sin(x), 2) + Math.Pow(Math.Cos(x), 2)*t);
             return firstTerm + secondTerm + thirdTerm;
@@ -19,7 +19,14 @@ namespace L0
             x = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите t: ");
             t = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(F(x, t));
+            try
+            {
+                Console.WriteLine(F(x, t));
+            }
+            catch 
+            {
+                Console.WriteLine("Для данных x и t решений нет");
+            }
         }
     }
 }
