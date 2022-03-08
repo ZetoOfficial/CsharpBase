@@ -1,20 +1,21 @@
 ﻿namespace L2Plus
 {
-    public class Program
+    public class FirstQuestion
     {
-        public static void Main()
+        public void Task1()
         {
-            List<string> animals = new List<string> { "собака", "собака", "кошка", "жираф" };
-            var animalsUnique = animals.Distinct();
-            foreach (var item in animals)
+            List<List<string>> animals = new List<List<string>>
             {
-                Console.Write($"{item} ");
-            }
-            Console.WriteLine();
-            foreach (var item in animalsUnique)
-            {
-                Console.Write($"{item} ");
-            }
+                new List<string> {"собака", "собака", "кошка", "жираф"},
+                new List<string> {"собака", "кошка", "жираф"},
+                new List<string> {"собака", "собака", "кошка"},
+                new List<string> {"собака", "кошка", "жираф"},
+            };
+
+            Array.ForEach(animals.ToArray(), x => Console.WriteLine(string.Join(" ", x)));
+            var result = animals.Select(y => y.GroupBy(x => x).Where(x => x.Count() == 1).Select(x => x.Key))
+                .Aggregate((a, b) => a.Intersect(b)).ToArray();
+            Array.ForEach(result, x => Console.WriteLine(string.Join(" ", x)));
         }
     }
 }

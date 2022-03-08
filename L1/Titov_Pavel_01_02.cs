@@ -6,10 +6,10 @@ namespace L1
         double cost; // Атрибут со стоимостью
         bool isStock; // Атрибут есть ли в наличии
         // Конструкторы 
-        public Product() {name = "Product"; cost = 0; isStock = false;}
-        public Product(string n) {name = n; cost = 0; isStock = false;}
-        public Product(string n, double c) {name = n; cost = c; isStock = false;}
-        public Product(string n, double c, bool stock) {name = n; cost = c; isStock = stock;}
+        public Product() { name = "Product"; cost = 0; isStock = false; }
+        public Product(string n) { name = n; cost = 0; isStock = false; }
+        public Product(string n, double c) { name = n; cost = c; isStock = false; }
+        public Product(string n, double c, bool stock) { name = n; cost = c; isStock = stock; }
         // Свойства
         public string Name
         {
@@ -38,26 +38,13 @@ namespace L1
         {
             set { if (cost - value >= 0) cost -= value; else cost = 0; }
         }
-    }
 
-    public class Titov_Pavel_01_02
-    {
-        public static void Main(string[] args)
+        public void ShowInfo()
         {
-            Product product = new Product();
-
             Console.WriteLine($"╔═══════════╦═══════════╦═══════════╗");
             Console.WriteLine($"║{"Название",10} ║{"Стоимость",10} ║{"В наличии",10} ║");
             Console.WriteLine($"╠═══════════╬═══════════╬═══════════╣");
-            Console.WriteLine($"║{product.Name,10} ║ {product.Cost,9} ║ {product.IsStock,9} ║");
-            product.Name = "Ball";
-            product.Cost = 100;
-            product.IsStock = true;
-            Console.WriteLine($"║{product.Name,10} ║ {product.Cost,9} ║ {product.IsStock,9} ║");
-            product.Name = "Car";
-            product.Cost = 5000;
-            product.IsStock = true;
-            Console.WriteLine($"║{product.Name,10} ║ {product.Cost,9} ║ {product.IsStock,9} ║");
+            Console.WriteLine($"║{Name,10} ║ {Cost,9} ║ {IsStock,9} ║");
             Console.WriteLine($"╚═══════════╩═══════════╩═══════════╝");
         }
     }

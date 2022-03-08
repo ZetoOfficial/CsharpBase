@@ -11,19 +11,19 @@ namespace L1
             return n == 0 ? throw new ArgumentException("No zero man") : n;
         }
 
-        public Triangle() { A1 = 1; A2 = 1; A3 = 1;}
+        public Triangle() { A1 = 1; A2 = 1; A3 = 1; }
 
-        public Triangle(double x, double y) 
-        { 
-            A1 = CheckZero(x); 
-            A2 = CheckZero(y); 
-            A3 = x+y/2;
+        public Triangle(double x, double y)
+        {
+            A1 = CheckZero(x);
+            A2 = CheckZero(y);
+            A3 = x + y / 2;
         }
 
-        public Triangle(double x, double y, double z) 
+        public Triangle(double x, double y, double z)
         {
-            A1 = CheckZero(x); 
-            A2 = CheckZero(y); 
+            A1 = CheckZero(x);
+            A2 = CheckZero(y);
             A3 = CheckZero(z);
         }
 
@@ -52,15 +52,6 @@ namespace L1
             s += $"4) Площадь: {GetP()}\n";
             s += $"5) Периметр: {GetS()}\n";
             return s;
-        }
-    }
-
-    public class Titov_Pavel_01_01
-    {
-        public static void Main(string[] args)
-        {
-            Triangle t = new Triangle(1, 1, 1);
-            Console.WriteLine(t.Info());
         }
     }
 }

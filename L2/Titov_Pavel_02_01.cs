@@ -2,7 +2,7 @@
 {
     public class Tasks
     {
-        public static double[] CreateDoubleArr(int n, int t1, int t2)
+        public double[] CreateDoubleArr(int n, int t1, int t2)
         {
             double[] a = new double[n];
             Random rnd = new Random();
@@ -11,7 +11,7 @@
             return a;
         }
 
-        public static int[] CreateIntArr(int n, int t1, int t2)
+        public int[] CreateIntArr(int n, int t1, int t2)
         {
             int[] a = new int[n];
             Random rnd = new Random();
@@ -20,13 +20,13 @@
             return a;
         }
 
-        public static void ShowArray(int[] a)
+        public void ShowArray(int[] a)
         {
             foreach (var i in a)
                 Console.Write($"{a[i]} ");
         }
 
-        public static void Task1()
+        public void Task1()
         {
             const int n = 6;
             int[] a = CreateIntArr(n, -10, 11);
@@ -47,7 +47,7 @@
             Console.WriteLine($"Максимальный элемент: {max}");
         }
 
-        public static void Task2()
+        public void Task2()
         {
             const int n = 20;
             int[] a = CreateIntArr(n, -10, 11);
@@ -59,7 +59,7 @@
             Console.WriteLine($"Массив упорядочен {(flag ? "по возрастанию" : "плохо")}");
         }
 
-        public static void Task3()
+        public void Task3()
         {
             const int n = 50;
             int[] a = CreateIntArr(n, -10, 11);
@@ -109,7 +109,7 @@
             Console.WriteLine();
         }
 
-        public static void Task4()
+        public void Task4()
         {
             const int n = 366; // 366 элементов, потому что чуть ниже идёт сдвиг на 1, который лучше не менять. Поэтому элементов на 1 больше, зато первый пустым можно сделать)
             double[] t = CreateDoubleArr(n, -9, 9);
@@ -199,7 +199,7 @@
             Console.WriteLine();
         }
 
-        public static void Task5()
+        public void Task5()
         {
             const int n = 10;
             string[] name = { "Ваня", "Гена", "Олег", "Коля", "Маша", "Нина", "Оля", "Таня", "Федя", "Галя" };
@@ -236,16 +236,9 @@
             Console.WriteLine($"d) выведите на экран информацию (имя, рост, вес) о тех людях, чей ИМТ находится вне нормы;");
         }
 
-        public static double IMT(double ves, int rost)
+        public double IMT(double ves, int rost)
         {
             return Math.Round(ves / Math.Pow(rost / 100.0, 2), 1);
-        }
-
-        public static void Main(string[] args)
-        {
-            Task3();
-            Task4();
-            Task5();
         }
     }
 }
