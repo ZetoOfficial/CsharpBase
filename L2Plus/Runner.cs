@@ -8,7 +8,8 @@ namespace L2Plus
             SecondQuestion sq = new();
 
             // fq.Task1();
-            sq.TaskA();
+            // sq.TaskA(6);
+            sq.TaskB();
         }
     }
 }
