@@ -2,12 +2,12 @@
 {
     public class SecondQuestion
     {
-        public int[,] GenArray(int n, int q)
+        public int[,] GenArray(int n, int m)
         {
             Random rnd = new Random();
-            int[,] arr = new int[n, q];
+            int[,] arr = new int[n, m];
             for (int i = 0; i < n; i++)
-                for (int j = 0; j < q; j++)
+                for (int j = 0; j < m; j++)
                     arr[i, j] = rnd.Next() % 10;
             return arr;
         }
@@ -24,12 +24,13 @@
             }
         }
 
-        public void TaskA(int n)
+        public void TaskA(int n, int m)
         {
             // Дан двумерный массив из N строк и M столбцов. 
             // Переставить первые три и последние три строки, сохранив порядок их следования. 
-            int[,] arr = GenArray(n, n);
+            int[,] arr = GenArray(n, m);
 
+            Console.WriteLine("before:");
             ShowArray(arr);
             for (int q = 0; q < n; q++)
             {
@@ -38,7 +39,7 @@
                     (arr[i, q], arr[n - 3 + i, q]) = (arr[n - 3 + i, q], arr[i, q]);
                 }
             }
-            Console.WriteLine();
+            Console.WriteLine("after:");
             ShowArray(arr);
         }
         public void TaskB()
@@ -46,6 +47,7 @@
             // Дан двумерный массив из пяти строк и двадцати столбцов.
             // Переставить первые три и последние три столбца, сохранив порядок их следования. 
             int[,] arr = GenArray(5, 20);
+            Console.WriteLine("before:");
             ShowArray(arr);
             for (int q = 0; q < 5; q++)
             {
@@ -54,7 +56,7 @@
                     (arr[q, i], arr[q, 20 - 3 + i]) = (arr[q, 20 - 3 + i], arr[q, i]);
                 }
             }
-            Console.WriteLine();
+            Console.WriteLine("after:");
             ShowArray(arr);
         }
     }

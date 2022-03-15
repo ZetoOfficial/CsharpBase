@@ -7,8 +7,11 @@ namespace L2Plus
             FirstQuestion fq = new();
             SecondQuestion sq = new();
 
-            // fq.Task1();
-            // sq.TaskA(6);
+            Console.WriteLine("1 task");
+            fq.Task1();
+            Console.WriteLine("2 task a");
+            sq.TaskA(6, 6);
+            Console.WriteLine("2 task b");
             sq.TaskB();
         }
     }
