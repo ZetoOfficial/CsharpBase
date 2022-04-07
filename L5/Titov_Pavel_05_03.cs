@@ -29,6 +29,10 @@ namespace L5
         {
             get; set;
         }
+        public Working(string filepath)
+        {
+            Filepath = filepath;
+        }
         public List<int> GetVagonsNumber()
         {
             var engine = new FileHelperEngine<Item>();
@@ -50,6 +54,8 @@ namespace L5
             {
                 average += item.Price;
             }
+            if (records.Length == 0)
+                throw new DivideByZeroException("Деление на ноль невозможно");
             return average / records.Length;
         }
         public void SortedDataByDate()
@@ -57,21 +63,8 @@ namespace L5
             var engine = new FileHelperEngine<Item>();
             var records = engine.ReadFile(Filepath);
 
-            // сортировка
-            Item temp;
-            for (int i = 0; i < records.Length - 1; i++)
-            {
-                for (int j = i + 1; j < records.Length; j++)
-                {
-                    if (records[i].Date > records[j].Date)
-                    {
-                        temp = records[i];
-                        records[i] = records[j];
-                        records[j] = temp;
-                    }
-                }
-            }
-            Console.WriteLine("Вывод отсортированного");
+            records.OrderBy(i => i.Date);
+
             foreach (var item in records)
                 Console.WriteLine($"{item.Name} {item.VagonNumber} {item.Date} {item.Price}");
         }

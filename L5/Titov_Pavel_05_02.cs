@@ -2,13 +2,21 @@ namespace L5
 {
     public class Titov_Pavel_05_02
     {
-        public void Task2(string filepath)
+        public string Filepath
+        {
+            get; set;
+        }
+        public Titov_Pavel_05_02(string filepath)
+        {
+            Filepath = filepath;
+        }
+        public void Task2()
         {
             const int width = 120;
             string[] words;
-            using (StreamReader sr = new StreamReader(filepath))
+            using (StreamReader sr = new StreamReader(Filepath))
             {
-                words = sr.ReadToEnd().Split(" |\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+                words = sr.ReadToEnd().Split("\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
             }
             for (var i = 0; i < words.Length; i++)
             {
@@ -17,7 +25,7 @@ namespace L5
                 int rightPadding = width - word.Length - leftPadding;
                 words[i] = new string(' ', leftPadding) + word + new string(' ', rightPadding);
             }
-            using (StreamWriter writer = new StreamWriter(filepath, false))
+            using (StreamWriter writer = new StreamWriter(Filepath, false))
             {
                 foreach (var word in words)
                 {

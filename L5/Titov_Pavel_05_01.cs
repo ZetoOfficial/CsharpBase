@@ -2,9 +2,17 @@ namespace L5
 {
     public class Titov_Pavel_05_01
     {
-        public int Task1(string filepath)
+        public string Filepath
         {
-            using (StreamReader sr = new StreamReader(filepath))
+            get; set;
+        }
+        public Titov_Pavel_05_01(string filepath)
+        {
+            Filepath = filepath;
+        }
+        public int Task1()
+        {
+            using (StreamReader sr = new StreamReader(Filepath))
             {
                 int count = 0;
                 string[] words = sr.ReadToEnd().Split(" .,!?:\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
