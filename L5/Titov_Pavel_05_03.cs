@@ -68,5 +68,24 @@ namespace L5
             foreach (var item in records)
                 Console.WriteLine($"{item.Name} {item.VagonNumber} {item.Date} {item.Price}");
         }
+
+        public int GetMinCost()
+        {
+            var engine = new FileHelperEngine<Item>();
+            var records = engine.ReadFile(Filepath);
+            return records.Min(item => item.Price);
+        }
+        public int GetMaxCost()
+        {
+            var engine = new FileHelperEngine<Item>();
+            var records = engine.ReadFile(Filepath);
+            return records.Max(item => item.Price);
+        }
+        public int GetSumPrice()
+        {
+            var engine = new FileHelperEngine<Item>();
+            var records = engine.ReadFile(Filepath);
+            return records.Sum(item => item.Price);
+        }
     }
 }

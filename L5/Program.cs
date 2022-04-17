@@ -16,6 +16,9 @@
             Console.WriteLine();
             Console.WriteLine(wr.AverageCostItem());
             wr.SortedDataByDate();
+            Console.WriteLine($"Минимальная стоимость угля: {wr.GetMinCost()}");
+            Console.WriteLine($"Максимальная стоимость угля: {wr.GetMaxCost()}");
+            Console.WriteLine($"Общая стоимость угля: {wr.GetSumPrice()}");
         }
     }
 }
