@@ -1,0 +1,15 @@
+/home/beffin/Projects/CsharpBase/L2/bin/Debug/net6.0/L2
+/home/beffin/Projects/CsharpBase/L2/bin/Debug/net6.0/L2.deps.json
+/home/beffin/Projects/CsharpBase/L2/bin/Debug/net6.0/L2.runtimeconfig.json
+/home/beffin/Projects/CsharpBase/L2/bin/Debug/net6.0/L2.dll
+/home/beffin/Projects/CsharpBase/L2/bin/Debug/net6.0/ref/L2.dll
+/home/beffin/Projects/CsharpBase/L2/bin/Debug/net6.0/L2.pdb
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.csproj.AssemblyReference.cache
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.GeneratedMSBuildEditorConfig.editorconfig
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.AssemblyInfoInputs.cache
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.AssemblyInfo.cs
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.csproj.CoreCompileInputs.cache
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.dll
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/ref/L2.dll
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.pdb
+/home/beffin/Projects/CsharpBase/L2/obj/Debug/net6.0/L2.genruntimeconfig.cache

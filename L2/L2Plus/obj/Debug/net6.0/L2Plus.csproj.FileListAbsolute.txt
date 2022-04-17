@@ -1,0 +1,15 @@
+/home/beffin/Projects/CsharpBase/L2Plus/bin/Debug/net6.0/L2Plus
+/home/beffin/Projects/CsharpBase/L2Plus/bin/Debug/net6.0/L2Plus.deps.json
+/home/beffin/Projects/CsharpBase/L2Plus/bin/Debug/net6.0/L2Plus.runtimeconfig.json
+/home/beffin/Projects/CsharpBase/L2Plus/bin/Debug/net6.0/L2Plus.dll
+/home/beffin/Projects/CsharpBase/L2Plus/bin/Debug/net6.0/ref/L2Plus.dll
+/home/beffin/Projects/CsharpBase/L2Plus/bin/Debug/net6.0/L2Plus.pdb
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.csproj.AssemblyReference.cache
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.GeneratedMSBuildEditorConfig.editorconfig
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.AssemblyInfoInputs.cache
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.AssemblyInfo.cs
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.csproj.CoreCompileInputs.cache
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.dll
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/ref/L2Plus.dll
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.pdb
+/home/beffin/Projects/CsharpBase/L2Plus/obj/Debug/net6.0/L2Plus.genruntimeconfig.cache
