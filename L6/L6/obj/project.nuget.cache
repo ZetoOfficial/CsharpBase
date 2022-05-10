@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8mjCpkcafG32HPzDZz4NDqLxCMVSh8RSp8mjNrdt6n1ZeFp+qLVX2LM8KIFiqy/CsKT1tBZvLFAQXM8WgWLPGw==",
+  "success": true,
+  "projectFilePath": "/home/beffin/Projects/CsharpBase/L6/L6/L6.csproj",
+  "expectedPackageFiles": [
+    "/home/beffin/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.2/microsoft.aspnetcore.app.ref.6.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

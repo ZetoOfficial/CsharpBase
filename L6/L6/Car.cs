@@ -21,7 +21,10 @@ namespace L6
             else
                 Console.WriteLine("Модификация не удалась");
         }
-
+        public bool checkDoor(int doorNum)
+        {
+            return (doorNum == this.doors);
+        }
         public Car() : base() { }
         public Car(string name) : base(name) { }
         public Car(string name, string color) : base(name, color) { }
@@ -41,22 +44,25 @@ namespace L6
 
         delegate void Movement(string s);
         delegate void Edit(int x);
+        delegate void Cheat(string s);
 
         public override void DopInfo()
         {
+            Console.WriteLine("Dop info for Car");
+            Cheat repair, modi, multiCheatDel;
             Movement move, teleport, multiMoveDel;
             Edit speedup, beeper, multiEditDel;
+
             move = Move;
             teleport = Teleport;
+
             speedup = SpeedUp;
             beeper = BeepBeep;
+
             multiMoveDel = move + teleport;
             multiEditDel = speedup + beeper;
-
             multiMoveDel("Казахстан");
-            multiEditDel(10);
-
-            Console.WriteLine("Dop info for Car");
+            multiEditDel(2);
         }
     }
 }

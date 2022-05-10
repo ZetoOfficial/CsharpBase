@@ -2,14 +2,43 @@
 {
     class Program
     {
+        static void SearchVagons(List<Vehicle> vehicles, int i)
+        {
+            var selectedVehicles = vehicles.Where(el => el is Express && ((Express)el).checkVagons(i));
+            foreach (var vehicle in selectedVehicles)
+                Console.WriteLine(vehicle);
+        }
+        static void SearchDoors(List<Vehicle> vehicles, int i)
+        {
+            var selectedVehicles = vehicles.Where(el => el is Car && ((Car)el).checkDoor(i));
+            foreach (var vehicle in selectedVehicles)
+                Console.WriteLine(vehicle);
+        }
+        static void SearchMaxSpeed(List<Vehicle> vehicles, int i)
+        {
+            var selectedVehicles = vehicles.Where(el => el is Train && ((Train)el).checkMaxSpeed(i));
+            foreach (var vehicle in selectedVehicles)
+                Console.WriteLine(vehicle);
+        }
+        static void SearchColor(List<Vehicle> vehicles, string c)
+        {
+            var selectedVehicles = vehicles.Where(el => el.checkColor(c));
+            foreach (var vehicle in selectedVehicles)
+                Console.WriteLine(vehicle);
+        }
         static void Main(string[] args)
         {
             WorkingWithObjectsClass wwoc = new();
 
             List<Vehicle> vehicles = wwoc.Deserialize();
+            SearchVagons(vehicles, 2);
+            SearchDoors(vehicles, 2);
+            SearchMaxSpeed(vehicles, 2);
+            SearchColor(vehicles, "Blue");
+
             try
             {
-                Console.WriteLine("Нажмите любую клавишу для начала работы");
+                Console.WriteLine("Нажмите любую клавишу для начала взаимодействия с данными");
                 Console.ReadKey();
                 bool work = true;
                 while (work)

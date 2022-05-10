@@ -15,6 +15,11 @@ namespace L6
         public string? ZodiacSign { get => zodiacSign; set => zodiacSign = value is null ? zodiacSign : value; }
         public int Speed { get => speed; set => speed = value; }
 
+        public bool checkColor(string colorInput)
+        {
+            return colorInput == this.color;
+        }
+
         public Vehicle() { }
         public Vehicle(string name)
         {
@@ -47,17 +52,18 @@ namespace L6
 
         public override string ToString()
         {
-            return $"Переопределённый вывод: {base.ToString()}";
+            return $"Переопределённый вывод: \n{Info()}";
         }
-        public void Info()
+        public string Info()
         {
-            Console.WriteLine("----------------INFO--------------------");
-            Console.WriteLine($"Название вашей ласточки: {Name}");
-            Console.WriteLine($"Цвет: {Color}");
-            Console.WriteLine($"Знак зодиака: {ZodiacSign}");
-            Console.WriteLine($"Текущая скорость: {Speed}");
+            string s = ("----------------INFO--------------------\n");
+            s += ($"Название вашей ласточки: {Name}\n");
+            s += ($"Цвет: {Color}\n");
+            s += ($"Знак зодиака: {ZodiacSign}\n");
+            s += ($"Текущая скорость: {Speed}\n");
+            s += ("----------------------------------------\n");
             DopInfo();
-            Console.WriteLine("----------------------------------------");
+            return s;
         }
     }
 }

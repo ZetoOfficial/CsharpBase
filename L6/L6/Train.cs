@@ -3,6 +3,7 @@ namespace L6
     public class Train : Vehicle
     {
         private int vagons;
+        private int maxSpeed;
         public int Vagons { get => vagons; set => vagons = value; }
 
         public Train() : base() { }
@@ -10,6 +11,11 @@ namespace L6
         public Train(string name, string color) : base(name, color) { }
         public Train(string name, string color, string zodiacSign) : base(name, color, zodiacSign) { }
         public Train(string name, string color, string zodiacSign, int speed) : base(name, color, zodiacSign, speed) { }
+
+        public bool checkMaxSpeed(int speedNum)
+        {
+            return (speedNum == this.maxSpeed);
+        }
 
         public override void Move(string? endpoint) => Console.WriteLine($"Поезд ({Color} {Name}, {ZodiacSign}) отправляется в {endpoint}. У нас есть Wi-Fi + кофе + душ)");
         public override void SpeedUp(int newSpeed)

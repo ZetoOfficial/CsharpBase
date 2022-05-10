@@ -11,11 +11,16 @@ namespace L6
         public Express(string name, string color, string zodiacSign) : base(name, color, zodiacSign) { }
         public Express(string name, string color, string zodiacSign, int speed) : base(name, color, zodiacSign, speed) { }
 
-        public override void Move(string? endpoint) => Console.WriteLine($"Эксперсс ({Color} {Name}, {ZodiacSign}) отправляется в {endpoint}. У нас есть Wi-Fi.");
+        public bool checkVagons(int vagonNum)
+        {
+            return vagonNum == this.vagons;
+        }
+
+        public override void Move(string? endpoint) => Console.WriteLine($"Экспресс ({Color} {Name}, {ZodiacSign}) отправляется в {endpoint}. У нас есть Wi-Fi.");
         public override void SpeedUp(int newSpeed)
         {
             Speed = newSpeed;
-            Console.WriteLine($"Эксперсс \"{Name}\" увеличил свою скорость до {newSpeed}...");
+            Console.WriteLine($"Экспресс \"{Name}\" увеличил свою скорость до {newSpeed}...");
         }
         public override void Teleport(string? location) => Console.WriteLine($"&^%#!@#!@#!@#!JH@G#!@JKGH#!@J#HG!@#K Done. Добро пожаловать в {location}");
         public override void BeepBeep(int duration) { for (int i = 0; i < duration; i++) { Console.WriteLine($"BEEP ..."); } }
